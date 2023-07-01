@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReviewListViewController: UIViewController {
+final class ReviewListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
