@@ -7,6 +7,15 @@
 
 import Foundation
 
+protocol ReviewListProtocol {
+}
+
 final class ReviewListPresenter {
+    private let viewController: ReviewListProtocol
+    
+    init(viewController: ReviewListProtocol) {
+        self.viewController = viewController
+    }
+    
     
 }
