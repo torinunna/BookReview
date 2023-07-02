@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ReviewListProtocol {
+    func setUpNavigationBar()
 }
 
 final class ReviewListPresenter {
@@ -17,5 +18,8 @@ final class ReviewListPresenter {
         self.viewController = viewController
     }
     
+    func viewDidLoad() {
+        viewController.setUpNavigationBar()
+    }
     
 }
