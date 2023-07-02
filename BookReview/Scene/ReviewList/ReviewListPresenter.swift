@@ -10,6 +10,7 @@ import UIKit
 protocol ReviewListProtocol {
     func setUpNavigationBar()
     func setUpViews()
+    func presentReviewWriteVC()
 }
 
 final class ReviewListPresenter: NSObject {
@@ -24,6 +25,9 @@ final class ReviewListPresenter: NSObject {
         viewController.setUpViews()
     }
     
+    func rightBarBtnPressed() {
+        viewController.presentReviewWriteVC()
+    }
 }
 
 extension ReviewListPresenter: UITableViewDataSource {
