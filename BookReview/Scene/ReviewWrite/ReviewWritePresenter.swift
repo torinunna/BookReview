@@ -7,6 +7,14 @@
 
 import Foundation
 
-final class ReviewWritePresenter {
+protocol ReviewWriteProtocol {
     
+}
+
+final class ReviewWritePresenter {
+    private let viewController: ReviewWriteProtocol
+    
+    init(viewController: ReviewWriteProtocol) {
+        self.viewController = viewController
+    }
 }

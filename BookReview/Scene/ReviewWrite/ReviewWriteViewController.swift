@@ -10,8 +10,14 @@ import UIKit
 
 final class ReviewWriteViewController: UIViewController {
     
+    private lazy var presenter = ReviewWritePresenter(viewController: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+}
+
+extension ReviewWriteViewController: ReviewWriteProtocol {
     
 }
