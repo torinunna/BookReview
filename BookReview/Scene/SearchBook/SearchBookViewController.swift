@@ -13,9 +13,16 @@ final class SearchBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
 }
 
 extension SearchBookViewController: SearchBookProtocol {
-    
+    func setUpViews() {
+        view.backgroundColor = .systemBackground
+        let searchController = UISearchController()
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = presenter
+        navigationItem.searchController = searchController
+    }
 }
