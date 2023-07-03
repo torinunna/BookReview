@@ -11,6 +11,7 @@ protocol ReviewWriteProtocol {
     func setUpNavigationBar()
     func showCloseAlert()
     func save()
+    func setUpViews()
 }
 
 final class ReviewWritePresenter {
@@ -22,6 +23,7 @@ final class ReviewWritePresenter {
     
     func viewDidLoad() {
         viewController.setUpNavigationBar()
+        viewController.setUpViews()
     }
     
     func leftBarBtnPressed() {
