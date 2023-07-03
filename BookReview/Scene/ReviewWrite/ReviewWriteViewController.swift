@@ -14,10 +14,14 @@ final class ReviewWriteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.viewDidLoad()
     }
     
 }
 
 extension ReviewWriteViewController: ReviewWriteProtocol {
-    
+    func setUpNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
+    }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ReviewWriteProtocol {
-    
+    func setUpNavigationBar()
 }
 
 final class ReviewWritePresenter {
@@ -16,5 +16,9 @@ final class ReviewWritePresenter {
     
     init(viewController: ReviewWriteProtocol) {
         self.viewController = viewController
+    }
+    
+    func viewDidLoad() {
+        viewController.setUpNavigationBar()
     }
 }
