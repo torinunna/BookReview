@@ -21,6 +21,11 @@ final class ReviewListViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter.viewWillAppear()
+    }
 
 }
 
@@ -44,6 +49,11 @@ extension ReviewListViewController: ReviewListProtocol {
         let vc = UINavigationController(rootViewController: ReviewWriteViewController())
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
+        print("최신 도서 리뷰 보여주기")
     }
 }
 
