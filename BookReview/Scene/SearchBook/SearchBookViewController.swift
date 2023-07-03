@@ -38,4 +38,8 @@ extension SearchBookViewController: SearchBookProtocol {
             $0.edges.equalToSuperview()
         }
     }
+    
+    func dismiss() {
+        dismiss(animated: true)
+    }
 }
