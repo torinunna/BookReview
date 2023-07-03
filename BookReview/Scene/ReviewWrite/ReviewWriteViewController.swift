@@ -22,7 +22,7 @@ final class ReviewWriteViewController: UIViewController {
 extension ReviewWriteViewController: ReviewWriteProtocol {
     func setUpNavigationBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(leftBarBtnPressed))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(rightBarBtnPressed))
     }
     
     func showCloseAlert() {
@@ -38,10 +38,18 @@ extension ReviewWriteViewController: ReviewWriteProtocol {
         
         present(alertController, animated: true)
     }
+    
+    func save() {
+        dismiss(animated: true)
+    }
 }
 
 private extension ReviewWriteViewController {
     @objc func leftBarBtnPressed() {
         presenter.leftBarBtnPressed()
+    }
+    
+    @objc func rightBarBtnPressed() {
+        presenter.rightBarBtnPressed()
     }
 }
