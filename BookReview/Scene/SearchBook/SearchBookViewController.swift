@@ -52,6 +52,7 @@ extension SearchBookViewController: SearchBookProtocol {
     }
     
     func dismiss() {
+        navigationItem.searchController?.dismiss(animated: true)
         dismiss(animated: true)
     }
     
