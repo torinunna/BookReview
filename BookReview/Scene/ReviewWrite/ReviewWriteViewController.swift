@@ -5,6 +5,7 @@
 //  Created by YUJIN KWON on 2023/07/02.
 //
 
+import Kingfisher
 import SnapKit
 import UIKit
 
@@ -105,8 +106,15 @@ extension ReviewWriteViewController: ReviewWriteProtocol {
     }
     
     func presentSearchBookVC() {
-        let vc = UINavigationController(rootViewController: SearchBookViewController())
+        let vc = UINavigationController(rootViewController: SearchBookViewController(searchBookDelegate: presenter))
         present(vc, animated: true)
+    }
+    
+    func updateViews(title: String, imageURL: URL?) {
+        bookTitleButton.setTitle(title, for: .normal)
+        bookTitleButton.setTitleColor(.label, for: .normal)
+        
+        imageView.kf.setImage(with: imageURL)
     }
 }
 
