@@ -46,10 +46,9 @@ extension ReviewListPresenter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let review = review[indexPath.row]
         cell.textLabel?.text = review.title
-        cell.detailTextLabel?.text = review.contents
         cell.imageView?.kf.setImage(with: review.imageURL, placeholder: .none) { _ in
             cell.setNeedsLayout()
         }
