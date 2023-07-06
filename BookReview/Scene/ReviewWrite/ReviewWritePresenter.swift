@@ -43,7 +43,7 @@ final class ReviewWritePresenter {
             let contentsText = contentsText,
             contentsText != contentsTextViewPlaceHolderText
         else { return }
-        let bookReview = BookReview(title: book.title, contents: contentsText, imageURL: book.imageURl)
+        let bookReview = BookReview(title: book.title, contents: contentsText, imageURL: book.imageURL)
         userDefaultsManager.setReview(bookReview)
         viewController.save()
     }
@@ -56,6 +56,6 @@ final class ReviewWritePresenter {
 extension ReviewWritePresenter: SearchBookDelegate {
     func selectiBook(_ book: Book) {
         self.book = book
-        viewController.updateViews(title: book.title, imageURL: book.imageURl)
+        viewController.updateViews(title: book.title, imageURL: book.imageURL)
     }
 }

@@ -11,6 +11,6 @@ struct Book: Decodable {
     let title: String
     private let image: String?
     
-    var imageURl: URL? { URL(string: image ?? "") }
+    var imageURL: URL? { URL(string: image ?? "") }
 }
 
