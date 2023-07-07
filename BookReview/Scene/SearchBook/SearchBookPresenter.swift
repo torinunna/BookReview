@@ -56,7 +56,9 @@ extension SearchBookPresenter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = books[indexPath.row].title
+        var content = cell.defaultContentConfiguration()
+        content.text = books[indexPath.row].title
+        cell.contentConfiguration = content
         return cell
     }
 }
