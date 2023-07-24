@@ -34,6 +34,11 @@ class ReviewListPresenterTests: XCTestCase {
         XCTAssertTrue(viewController.isSetUpViewsCalled)
     }
     
+    func test_rightBarBtnPressed() {
+        sut.rightBarBtnPressed()
+        
+        XCTAssertTrue(viewController.isPresentReviewWriteVCCalled)
+    }
 }
 
 final class MockReviewListViewController: ReviewListProtocol {
