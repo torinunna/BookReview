@@ -22,7 +22,7 @@
 		86D0B9012A50722C009A3C2A /* ReviewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0B9002A50722C009A3C2A /* ReviewListViewController.swift */; };
 		86D0B9062A50722D009A3C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D0B9052A50722D009A3C2A /* Assets.xcassets */; };
 		86D0B9092A50722D009A3C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D0B9072A50722D009A3C2A /* LaunchScreen.storyboard */; };
-		86D0B9142A50722E009A3C2A /* BookReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0B9132A50722E009A3C2A /* BookReviewTests.swift */; };
+		86D0B9142A50722E009A3C2A /* ReviewListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0B9132A50722E009A3C2A /* ReviewListPresenterTests.swift */; };
 		86D0B91E2A50722E009A3C2A /* BookReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0B91D2A50722E009A3C2A /* BookReviewUITests.swift */; };
 		86D0B9202A50722E009A3C2A /* BookReviewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D0B91F2A50722E009A3C2A /* BookReviewUITestsLaunchTests.swift */; };
 		86D0B92E2A5072A5009A3C2A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 86D0B92D2A5072A5009A3C2A /* SnapKit */; };
@@ -67,7 +67,7 @@
 		86D0B9082A50722D009A3C2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86D0B90A2A50722D009A3C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86D0B90F2A50722E009A3C2A /* BookReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		86D0B9132A50722E009A3C2A /* BookReviewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewTests.swift; sourceTree = "<group>"; };
+		86D0B9132A50722E009A3C2A /* ReviewListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListPresenterTests.swift; sourceTree = "<group>"; };
 		86D0B9192A50722E009A3C2A /* BookReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0B91D2A50722E009A3C2A /* BookReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITests.swift; sourceTree = "<group>"; };
 		86D0B91F2A50722E009A3C2A /* BookReviewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookReviewUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 		86D0B9122A50722E009A3C2A /* BookReviewTests */ = {
 			isa = PBXGroup;
 			children = (
-				86D0B9132A50722E009A3C2A /* BookReviewTests.swift */,
+				86D0B9132A50722E009A3C2A /* ReviewListPresenterTests.swift */,
 			);
 			path = BookReviewTests;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D0B9142A50722E009A3C2A /* BookReviewTests.swift in Sources */,
+				86D0B9142A50722E009A3C2A /* ReviewListPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
