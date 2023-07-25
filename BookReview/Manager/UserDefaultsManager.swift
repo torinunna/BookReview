@@ -9,7 +9,7 @@ import Foundation
 
 protocol UserDefaultsManagerProtocol {
     func getReviews() -> [BookReview]
-    func setReview(_ newValue: BookReview)
+    func setReviews(_ newValue: BookReview)
 }
 
 struct UserDefaultsManager: UserDefaultsManagerProtocol {
@@ -24,7 +24,7 @@ struct UserDefaultsManager: UserDefaultsManagerProtocol {
         return (try? PropertyListDecoder().decode([BookReview].self, from: data)) ?? []
     }
     
-    func setReview(_ newValue: BookReview) {
+    func setReviews(_ newValue: BookReview) {
         var currentReviews: [BookReview] = getReviews()
         currentReviews.insert(newValue, at: 0)
         

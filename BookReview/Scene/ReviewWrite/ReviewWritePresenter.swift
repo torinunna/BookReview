@@ -44,7 +44,7 @@ final class ReviewWritePresenter {
             contentsText != contentsTextViewPlaceHolderText
         else { return }
         let bookReview = BookReview(title: book.title, contents: contentsText, imageURL: book.imageURL)
-        userDefaultsManager.setReview(bookReview)
+        userDefaultsManager.setReviews(bookReview)
         viewController.save()
     }
     

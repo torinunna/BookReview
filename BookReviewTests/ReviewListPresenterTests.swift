@@ -12,12 +12,14 @@ class ReviewListPresenterTests: XCTestCase {
 
     var sut: ReviewListPresenter!
     var viewController: MockReviewListViewController!
+    var userDefaultsManager: MockUserDefaultsManager!
 
     override func setUp() {
         super.setUp()
         
         viewController = MockReviewListViewController()
-        sut = ReviewListPresenter(viewController: viewController)
+        userDefaultsManager = MockUserDefaultsManager()
+        sut = ReviewListPresenter(viewController: viewController, userDefaultsManager: userDefaultsManager)
     }
     
     override func tearDown() {
@@ -39,6 +41,30 @@ class ReviewListPresenterTests: XCTestCase {
         
         XCTAssertTrue(viewController.isPresentReviewWriteVCCalled)
     }
+    
+    func test_viewWillAppear() {
+        sut.viewWillAppear()
+        
+        XCTAssertTrue(userDefaultsManager.isGetReviewsCalled)
+        XCTAssertTrue(viewController.isReloadTableViewCalled)
+    }
+}
+
+final class MockUserDefaultsManager: UserDefaultsManagerProtocol {
+    
+    var isGetReviewsCalled = false
+    var isSetReviewsCalled = false
+    
+    func getReviews() -> [BookReview] {
+        isGetReviewsCalled = true
+        return []
+    }
+    
+    func setReviews(_ newValue: BookReview) {
+        isSetReviewsCalled = true
+    }
+    
+    
 }
 
 final class MockReviewListViewController: ReviewListProtocol {
