@@ -49,4 +49,10 @@ class ReviewWritePresenterTests: XCTestCase {
         XCTAssertTrue(userDefaultsMangaer.isSetReviewsCalled)
         XCTAssertTrue(viewController.isSaveCalled)
     }
+    
+    func test_bookTitleBtnPressed() {
+        sut.bookTitleBtnPressed()
+        
+        XCTAssertTrue(viewController.isPresentSearchBookVCCalled)
+    }
 }
