@@ -41,4 +41,12 @@ class ReviewWritePresenterTests: XCTestCase {
         
         XCTAssertTrue(viewController.isShowCloseAlertCalled)
     }
+    
+    func test_rightBarBtnPressed() {
+        sut.book = Book(title: "Swift", imageURL: "")
+        sut.rightBarBtnPressed(contentsText: "유익한 책입니다.")
+        
+        XCTAssertTrue(userDefaultsMangaer.isSetReviewsCalled)
+        XCTAssertTrue(viewController.isSaveCalled)
+    }
 }
