@@ -19,7 +19,7 @@ final class MockReviewWriteViewController: ReviewWriteProtocol {
     var isUpdateViewsCalled = false
     
     func setUpNavigationBar() {
-        isSetUpViewsCalled = true
+        isSetUpNavigationBarCalled = true
     }
     
     func showCloseAlert() {

@@ -29,4 +29,12 @@ class ReviewWritePresenterTests: XCTestCase {
         super.tearDown()
     }
     
+    func test_viewDidLoad() {
+        sut.viewDidLoad()
+        
+        XCTAssertTrue(viewController.isSetUpNavigationBarCalled)
+        XCTAssertTrue(viewController.isSetUpViewsCalled)
+        
+    }
+    
 }
