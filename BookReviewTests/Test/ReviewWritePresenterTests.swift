@@ -34,7 +34,11 @@ class ReviewWritePresenterTests: XCTestCase {
         
         XCTAssertTrue(viewController.isSetUpNavigationBarCalled)
         XCTAssertTrue(viewController.isSetUpViewsCalled)
-        
     }
     
+    func test_leftBarBtnPressed() {
+        sut.leftBarBtnPressed()
+        
+        XCTAssertTrue(viewController.isShowCloseAlertCalled)
+    }
 }
